@@ -1,0 +1,10 @@
+{
+  "description": "Automates file analysis to generate tailored solutions, helping users efficiently transform input data into actionable outputs for their needs.",
+  "robots": {
+    "index": false
+  },
+  "accessibility": {
+    "addBypassLinks": false,
+    "ignoreReducedMotion": false
+  }
+}
