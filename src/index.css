@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Vazirmatn', system-ui, sans-serif;
+}
+
+* {
+  font-family: 'Vazirmatn', system-ui, sans-serif;
+}
+
+:root {
+  --navy: #1a2744;
+  --navy-dark: #111b35;
+  --navy-light: #243255;
+  --page-bg: #f0f2f5;
+  --card-bg: #ffffff;
+  --border-color: #dde1e8;
+  --text-primary: #1a2744;
+  --text-secondary: #5a6478;
+  --text-muted: #8c95a6;
+  --accent-blue: #2563eb;
+  --status-green: #16a34a;
+  --status-amber: #d97706;
+  --status-red: #dc2626;
+  --status-green-bg: #f0fdf4;
+  --status-amber-bg: #fffbeb;
+  --status-red-bg: #fef2f2;
+}
+
+html, body, #root {
+  direction: rtl;
+  height: 100%;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: #f0f2f5; }
+::-webkit-scrollbar-thumb { background: #c0c8d8; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #a0a8b8; }
+
+/* Table sticky header */
+.sticky-header thead th { position: sticky; top: 0; z-index: 10; }
+
+/* Map region animations */
+.map-region { transition: fill 0.15s ease, opacity 0.15s ease; cursor: pointer; }
+.map-region:hover { opacity: 0.8; }
+.map-region.selected { stroke-width: 2; stroke: #1a2744; }
+
+/* Chart tooltip */
+.recharts-tooltip-wrapper { z-index: 100; }
+
+/* Number formatting */
+.num-cell { font-variant-numeric: tabular-nums; }
+
+/* Hover transitions */
+.kpi-card { transition: box-shadow 0.15s ease, transform 0.1s ease; }
+.kpi-card:hover { box-shadow: 0 4px 12px rgba(26,39,68,0.12); transform: translateY(-1px); }
+
+.filter-group { border: 1px solid var(--border-color); border-radius: 6px; background: #fafbfd; }
+
+/* Province tooltip */
+.province-tooltip {
+  position: absolute;
+  background: #1a2744;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-size: 12px;
+  pointer-events: none;
+  z-index: 50;
+  white-space: nowrap;
+}
+
+/* Status badges */
+.badge-open { background: #fef2f2; color: #dc2626; border: 1px solid #fecaca; }
+.badge-matched { background: #f0fdf4; color: #16a34a; border: 1px solid #bbf7d0; }
+.badge-pending { background: #fffbeb; color: #d97706; border: 1px solid #fde68a; }
+.badge-critical { background: #fff1f2; color: #be123c; border: 1px solid #fecdd3; }
+.badge-high { background: #fff7ed; color: #c2410c; border: 1px solid #fed7aa; }
+.badge-medium { background: #fffbeb; color: #b45309; border: 1px solid #fde68a; }
+.badge-low { background: #f0fdf4; color: #15803d; border: 1px solid #bbf7d0; }
+
